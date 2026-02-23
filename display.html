@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e6f2ff;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #9b1394;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Field</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>Full Name</td>
+        <td id="name"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td id="email"></td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td id="age"></td>
+        
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        <td id="mobile"></td>
+    </tr>
+    <tr>
+         <td>Address</td>
+         <td id="address"></td>
+
+
+    </tr>
+
+    <tr>
+        <td>Profession</td>
+        <td id="profession"></td>
+    </tr>
+</table>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("name").textContent = params.get("fullname");
+    document.getElementById("email").textContent = params.get("email");
+     document.getElementById("age").textContent = params.get("age");
+   
+    document.getElementById("mobile").textContent = params.get("mobile");
+
+    document.getElementById("address").textContent = params.get("address");
+    document.getElementById("profession").textContent = params.get("profession");
+</script>
+
+</body>
+</html>

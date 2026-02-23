@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        form {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<form action="display.html" method="GET">
+    <h2>User Information Form</h2>
+    
+    <label>Full Name:</label>
+    <input type="text" name="fullname" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Age:</label>
+    <input type="number" name="age" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
